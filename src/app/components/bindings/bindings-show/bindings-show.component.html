@@ -1,0 +1,32 @@
+<p>Interpolation: {{ name }} </p>
+
+<p>Attribute binding:
+     <a [id]="aid" [style]="aStyle" >Home Page</a></p>
+
+<p>Event binding:
+     <button (click)="onSave()">Save</button></p>
+
+<p>Two way binding: 
+    <input type="text" name="name" [(ngModel)]="model.nome"></p>
+
+<p>{{ model.nome }}</p>
+
+ ngIF: <button (click)="onShow()">
+     {{ show ? "Esconde" : "Mostra" }}</button>
+ --> <span *ngIf="show">Text to show</span>
+    <span *ngIf="show2">Text to show1</span>
+
+ <p>ngFor</p>
+ <ul style="list-style-type: disclosure-closed;">
+     <li *ngFor="let product of Products"> {{product.id}} - {{product.name}}</li>
+ </ul>
+
+ <p>Aplicação de mascáras</p>
+ <span>{{anuncio.visualizacoes}} visitas - {{anuncio.dataHoradaInsercao | date:'dd/MM/yyyy HH:mm'}}</span>
+
+<p>Environments: {{ title }}</p>
+
+<p>cor : {{ omega2.cor }}</p>
+<p>combustivel : {{ omega2.combustivel }}</p>
+
+Cilindrada : <input type="text" name="name" [(ngModel)]="omega2.motor">
